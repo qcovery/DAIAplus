@@ -1,0 +1,12 @@
+{
+    "name": "qcovery/daia-plus",
+    "description": "Use additional information of the DAIAplus webservice.",
+    "type": "qcovery-module",
+    "require": {
+        "php": ">=7.3",
+        "qcovery/vufind-composer-installer-plugin": "*"
+    },
+    "extra": {
+        "moduleName": "DAIAplus"
+    }
+}
