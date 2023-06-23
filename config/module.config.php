@@ -4,15 +4,23 @@ namespace DAIAplus\Module\Configuration;
 $config = [
     'service_manager' => [
         'allow_override' => true,
-        'factories' => [
-            'DAIAplus\AjaxHandler\PluginManager' => 'VuFind\ServiceManager\AbstractPluginManagerFactory',
-            'DAIAplus\ILS\Connection' => 'DAIAplus\ILS\ConnectionFactory',
-            'DAIAplus\ILS\Driver\PluginManager' => 'VuFind\ServiceManager\AbstractPluginManagerFactory',
-        ],
         'aliases' => [
-            'VuFind\AjaxHandler\PluginManager' => 'DAIAplus\AjaxHandler\PluginManager',
+            'daia' => 'DAIAplus\ILS\Driver\DAIA',
+            'getArticleStatuses' => 'DAIAplus\AjaxHandler\GetArticleStatuses',
+            'getArticleStatusesUW' => 'DAIAplus\AjaxHandler\GetArticleStatusesUW',
+            'getItemStatuses' => 'DAIAplus\AjaxHandler\GetItemStatuses',
+            'paia' => 'DAIAplus\ILS\Driver\PAIA',
             'VuFind\ILSConnection' => 'DAIAplus\ILS\Connection',
-            'VuFind\ILSDriverPluginManager' => 'DAIAplus\ILS\Driver\PluginManager',
+        ],
+        'factories' => [
+            'DAIAplus\ILS\Driver\DAIA' => 'DAIAplus\ILS\Driver\DriverWithDateConverterFactory',
+            'DAIAplus\ILS\Driver\PAIA' => 'DAIAplus\ILS\Driver\PAIAFactory',
+
+
+            'DAIAplus\ILS\Connection' => 'DAIAplus\ILS\ConnectionFactory',
+            'DAIAplus\AjaxHandler\GetArticleStatuses' => 'DAIAplus\AjaxHandler\GetArticleStatusesFactory',
+            'DAIAplus\AjaxHandler\GetArticleStatusesUW' => 'DAIAplus\AjaxHandler\GetArticleStatusesFactoryUW',
+            'DAIAplus\AjaxHandler\GetItemStatuses' => 'DAIAplus\AjaxHandler\GetItemStatusesFactory',
         ],
     ],
 ];
