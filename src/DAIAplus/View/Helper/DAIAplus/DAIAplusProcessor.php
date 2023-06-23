@@ -4,7 +4,7 @@
  */
 namespace DAIAplus\View\Helper\DAIAplus;
 
-class DAIAplusProcessor extends \Zend\View\Helper\AbstractHelper
+class DAIAplusProcessor extends \Laminas\View\Helper\AbstractHelper
 {
     protected $config;
 

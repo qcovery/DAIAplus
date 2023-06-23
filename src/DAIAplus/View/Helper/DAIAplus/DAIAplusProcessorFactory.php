@@ -28,7 +28,7 @@
 namespace DAIAplus\View\Helper\DAIAplus;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 /**
  * SearchBox helper factory.
