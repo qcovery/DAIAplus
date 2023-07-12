@@ -153,7 +153,7 @@ foreach ($cumulatedResults as $storage => $cumulatedResult) {
 
         if ($list) {
             if ($daiaResult['daiaplus']['list_more_link']) {
-                echo '<br><a href="' . $this->recordLink()->getUrl($this->driver) . $ppn . '#availability">' . $this->transEsc('additional_copies') . '...</a>';
+                echo '<br><a href="' . $this->recordLinker()->getUrl($this->driver) . $ppn . '#availability">' . $this->transEsc('additional_copies') . '...</a>';
             }
         } else {
             if ($daiaResult['daiaplus']['queue'] != '') {
