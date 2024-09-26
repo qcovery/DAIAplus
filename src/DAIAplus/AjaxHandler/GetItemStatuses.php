@@ -216,7 +216,6 @@ class GetItemStatuses extends \VuFind\AjaxHandler\GetItemStatuses
                         'ppn' => $current['id'],
                         'mediatype' => $mediatype,
                         'hideLink' => $hideLink,
-                        'mediatype' => $mediatype,
                     ]
                 );
 //neu A

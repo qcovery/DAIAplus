@@ -63,7 +63,7 @@ class ConnectionFactory extends \VuFind\ILS\ConnectionFactory
         }
         $catalog = new $requestedName(
             $container->get('VuFind\Config\PluginManager')->get('config')->Catalog,
-            $container->get('DAIAplus\ILS\Driver\PluginManager'),
+            $container->get(\VuFind\ILS\Driver\PluginManager::class),
             $container->get('VuFind\Config\PluginManager')
         );
         return $catalog->setHoldConfig($container->get('VuFind\ILS\HoldSettings'));

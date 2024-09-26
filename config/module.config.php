@@ -21,12 +21,13 @@ $config = [
                 'factories' => [
                     'DAIAplus\AjaxHandler\GetArticleStatuses' => 'DAIAplus\AjaxHandler\GetArticleStatusesFactory',
                     'DAIAplus\AjaxHandler\GetArticleStatusesUW' => 'DAIAplus\AjaxHandler\GetArticleStatusesFactoryUW',
-                    //'DAIAplus\AjaxHandler\GetItemStatuses' => 'DAIAplus\AjaxHandler\GetItemStatusesFactory',
+                    'DAIAplus\AjaxHandler\GetItemStatuses' => 'DAIAplus\AjaxHandler\GetItemStatusesFactory',
                 ],
                 'aliases' => [
                     'getArticleStatuses' => 'DAIAplus\AjaxHandler\GetArticleStatuses',
                     'getArticleStatusesUW' => 'DAIAplus\AjaxHandler\GetArticleStatusesUW',
                     //'getItemStatuses' => 'DAIAplus\AjaxHandler\GetItemStatuses',
+                    //'VuFind\AjaxHandler\GetItemStatuses' => 'DAIAplus\AjaxHandler\GetItemStatuses',
                 ],
             ],
         ],
